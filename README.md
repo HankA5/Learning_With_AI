@@ -1,22 +1,93 @@
-## Learning_With_AI
+# Learning With AI
 
+## Overview
+This repository documents how AI tools were used to support the development of a lizard habitat monitoring system. The focus was on learning both the **software** and **hardware** aspects required to collect, process, and interpret environmental and behavioral data.
 
-### Software Domain
+AI was used as a tool for:
+- Writing and debugging code  
+- Understanding hardware setup and communication  
+- Troubleshooting issues during development  
+- Accelerating learning in unfamiliar areas  
 
-In this project, I used AI tools to improve my understanding of sensor data analysis and how to process environmental data collected from hardware sensors.
+---
 
-Why this was necessary:
-My lizard habitat uses multiple sensors (temperature, humidity, and light). I needed to analyze the data produced by these sensors and determine when the enclosure environment moves outside of safe operating conditions. This required learning how to interpret sensor output, monitor values over time, and understand how software can respond when readings move outside acceptable ranges.
+## Software Domain
 
-How AI helped:
-AI assisted by explaining data-processing concepts, reviewing example code, and helping identify logic errors during development. It was also useful for understanding how sensor data is formatted and how to structure simple programs to read, process, and display that information. I used these explanations to refine my understanding and verify results through testing and experimentation.
+### What I Learned
+Through this project, I learned how to:
+- Read and process **sensor data (temperature and humidity)**  
+- Structure Arduino programs for continuous data collection  
+- Format and transmit data between devices (UART communication)  
+- Generate meaningful outputs (e.g., email reports)  
+- Debug issues in embedded systems code  
 
-### Hardware Domain
+### Why This Was Necessary
+The system depends on accurately interpreting environmental data and combining it with behavioral data from the camera. Without proper data handling, the system would not be able to identify meaningful patterns or generate useful reports.
 
-AI was also used to help learn how to properly use sensors and microcontrollers to gather accurate environmental data.
+### How AI Helped
+AI played a major role in software development by:
+- Helping structure Arduino code for both the ESP32-C6 and ESP32-CAM  
+- Assisting with implementing **frame differencing** for motion detection  
+- Debugging issues in Wi-Fi connectivity and email functionality  
+- Explaining how to use libraries such as:
+  - `Adafruit_AHTX0`
+  - `ESP_Mail_Client`
+  - `esp_camera`  
+- Rebuilding lost code for the ESP32-CAM and ensuring it matched expected output formats  
 
-Why this was necessary:
-The project required sensors to collect real-time temperature and humidity data from the enclosure. This meant learning how to wire sensors correctly, use a breadboard for prototyping circuits, and connect the hardware to a microcontroller for data collection.
+### Key Takeaway
+AI significantly accelerated development, but required validation. I learned to test outputs carefully and not rely on AI blindly.
 
-How AI helped:
-AI provided assistance with interpreting sensor datasheets, understanding wiring diagrams, and learning how to properly connect components using a breadboard. It also helped explain how to work within the Arduino IDE, including how to install and select the correct libraries required for different sensors. Example Arduino sketches were used as references for reading sensor values and outputting the data to the serial monitor. These examples were then tested and modified on the hardware setup to ensure the sensors were wired correctly and producing reliable readings.
+---
+
+## Hardware Domain
+
+### What I Learned
+Through this project, I learned how to:
+- Wire and integrate multiple components:
+  - ESP32-C6  
+  - ESP32-CAM  
+  - AHT10 sensor  
+- Use a breadboard for prototyping  
+- Establish **UART communication** between two microcontrollers  
+- Properly power and configure embedded devices  
+- Flash code onto the ESP32-CAM using a USB-to-TTL adapter  
+
+### Why This Was Necessary
+The system relies on multiple devices working together:
+- The ESP32-CAM detects motion and position  
+- The ESP32-C6 processes sensor data and sends reports  
+
+Without proper hardware setup and communication, the system would not function.
+
+### How AI Helped
+AI assisted with:
+- Understanding wiring and hardware connections  
+- Explaining how to safely connect components and avoid issues (e.g., risky pins like IO12)  
+- Guiding the flashing process for the ESP32-CAM, which is more complex than standard boards  
+- Helping debug communication issues between the two boards  
+- Suggesting design improvements (e.g., removing the unnecessary Arduino Nano)  
+
+### Key Takeaway
+AI was especially useful for hardware learning, but required cross-checking with real-world testing since hardware issues are not always obvious from code alone.
+
+---
+
+## Challenges and Limitations of AI
+
+- AI sometimes produced **confident but incorrect information**  
+- Small mistakes in code (e.g., naming errors) required debugging  
+- Hardware issues still required **manual testing and iteration**  
+
+### Strategy Moving Forward
+- Use AI for **specific, targeted questions**  
+- Validate results through testing  
+- Use external resources (documentation, videos) when needed  
+
+---
+
+## Conclusion
+
+AI was a valuable tool throughout this project, helping bridge gaps in both software and hardware knowledge. It allowed faster iteration and problem-solving, but success depended on actively verifying and understanding the solutions provided.
+
+This project demonstrates how AI can be effectively used as a **learning and development assistant**, rather than a replacement for critical thinking.
