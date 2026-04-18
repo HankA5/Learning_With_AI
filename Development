@@ -1,0 +1,14 @@
+---
+marp: true
+title: Lizard Monitoring System
+author: Hank Slaby
+description: Environmental and Behavioral Monitoring for Leopard Geckos
+---
+# Learning with AI — Development
+- Learned how to structure Arduino code  
+- Used AI to:
+  - Build working sketches  
+  - Debug errors  
+  - Select correct libraries  
+
+---
