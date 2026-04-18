@@ -1,0 +1,17 @@
+---
+marp: true
+title: Lizard Monitoring System
+author: Hank Slaby
+description: Environmental and Behavioral Monitoring for Leopard Geckos
+---
+
+# Learning with AI — Hardware Integration
+
+- Wiring ESP32-C6, CAM, and AHT10  
+- Flashing ESP32-CAM (complex process)  
+- UART communication setup  
+
+**Key takeaway:**
+> AI accelerated setup, but required validation and debugging
+
+---
